@@ -1,8 +1,29 @@
+console.log(GetTimings(5));
+
+/// Returns a beat pattern (spread over a 4-beats-bar) for a number of syllables.
 function GetTimings (syllables) 
 {
-    return beats.filter(isGreaterThanFive(syllables));
+    var beats = GetAllBeats();
+    var possibleBeats = beats.filter(word => word.length == syllables);
+    var selectedBeat = possibleBeats[Math.floor(Math.random(possibleBeats.length))]; // return one of them
+
+    var durations = GetDurationArray(selectedBeat);
+
+    return durations;
 }
 
+function GetDurationArray (beat)
+{
+    var durationArray = [beat.length];
+    for (i = 0; i < beat.length; i++)
+    {
+        durationArray[i] = GetNoteDuration(beat[i]);
+    }
+
+    return durationArray;
+}
+
+/// Returns the beats each note type lasts.
 function GetNoteDuration (note)
 {
     switch(note)
@@ -20,34 +41,41 @@ function GetNoteDuration (note)
     }
 }
 
-var beats = [
-    'f',                // 1 syllable
+/// All possible beats, length is syllables.
+function GetAllBeats()
+{
+    var beats = [
+        'f',                // 1 syllable
 
-    'hh',               // 2 syllables
+        'hh',               // 2 syllables
 
-    'hqq',              // 3 syllables
-    'qqh',              // 3 syllables
-    'qhq',              // 3 syllables
+        'hqq',              // 3 syllables
+        'qqh',              // 3 syllables
+        'qhq',              // 3 syllables
 
-    'qqqq',             // 4 syllables
+        'qqqq',             // 4 syllables
 
-    'qeeqq',            // 5 syllables
+        'qeeqq',            // 5 syllables
 
-    'qeeeeq',           // 6 syllables
+        'qeeeeq',           // 6 syllables
 
-    'zzzeeee',          // 7 syllables,
+        'zzzeeee',          // 7 syllables,
 
-    'eeeeqess',         // 8 syllables
+        'eeeeqess',         // 8 syllables
 
-    'tttqtttee',        // 9 syllables
+        'tttqtttee',        // 9 syllables
 
-    'ssssqsseee',       // 10 syllables
+        'ssssqsseee',       // 10 syllables
 
-    'tttttteettt',      // 11 syllables
+        'tttttteettt',      // 11 syllables
 
-    'tttttttttttt',     // 12 syllables
-];
+        'tttttttttttt'      // 12 syllables
+    ];
 
+    return beats;
+}
+
+/// Compare two integers and return true if they match.
 function IsFittingCount(x, syllables) {
     return x.length == syllables;
 }
