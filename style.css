@@ -1,0 +1,47 @@
+body {
+    background-image: url('BodyBackground.png');
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    
+
+    padding-top: 15px;
+    font-size: 110px;
+    line-height: 10px;
+
+    color:white;
+}
+
+p {
+    color: blue;
+}
+
+.menuBox {
+    width: 600px;
+    height: 400px;
+
+    margin: auto;
+
+    padding: 15px;
+}
+
+.inputField {
+    padding: 5px;
+
+    min-width: 600px;
+    max-width: 600px;
+
+    min-height: 200px;
+}
+
+.submitButton {
+    margin-top: 10px;
+    background-color: white;
+}
+
+.inputField p {
+    color: lightgray;
+}

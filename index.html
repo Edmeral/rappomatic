@@ -4,10 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+
   <title>Rappomatic</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <h1>It's works</h1>
+    <div class="menuBox">
+        <h1>Rappomatic</h1>
+
+        <form action="/cgi-bin/hello_get.cgi" method="get">
+            Lyrics: <br />
+            <textarea class="inputField" rows="10" cols="72" name="description">
+Never meant to make your daughter cry
+I apologize a trillion times
+            </textarea>
+            <input class="submitButton" type="submit" value="Rap it yo!" />
+            </form>
+    </div>
+
+    
+  
 
   <script src="bundle.js"></script>
 </body>
