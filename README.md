@@ -17,6 +17,16 @@
 - separate on user-created line breaks
 - separate if line is too long
 
+## How to run
+Clone the repository and and install the dependencies
+```sh
+npm install
+```
+Start the application by running:
+```sh
+npm start
+```
+
 ### find synonyms if last words of verses are not rhyming
 
 ### convert verses to arrays of syllables
