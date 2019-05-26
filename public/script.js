@@ -27,6 +27,8 @@ form.addEventListener('submit', event => {
 
   const promises = []
 
+  
+
   for (let i  = 0; i < lines.length - 1; i += 2) {
     const lastWorld1 = wordsOfLines[i][wordsOfLines[i].length - 1]
     const lastWorld2 = wordsOfLines[i+1][wordsOfLines[i+1].length - 1]
@@ -41,4 +43,7 @@ form.addEventListener('submit', event => {
     document.getElementById('result').innerHTML = wordsOfLines.map(line => line.join(' '))
                             .join('<br>')
   })
+
+  var audio = new Audio('./90bpm.mp3');
+    audio.play();
 })
