@@ -22,11 +22,10 @@ Clone the repository and and install the dependencies
 ```sh
 npm install
 ```
-We need an extra step to be able to run JavaScript code in the browser, we use Browserify to compile the script file:
+Start the application by running:
 ```sh
-npm run build
+npm start
 ```
-
 
 ### find synonyms if last words of verses are not rhyming
 
